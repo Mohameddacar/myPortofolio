@@ -275,11 +275,15 @@ body {
     border: none;
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 600;
 }
 
 .btn-secondary:hover {
-    background: darken(var(--secondary-color), 10%);
+    background: #0d6efd;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(20, 126, 251, 0.3);
     color: var(--white);
 }
 
