@@ -162,7 +162,7 @@ body {
 
 /* Social Links Sidebar */
 .social-links {
-  position: absolute;
+  position: fixed;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
@@ -170,9 +170,13 @@ body {
   flex-direction: column;
   gap: 10px;
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
+/* Social Icons */
 .social-links a {
   color: var(--primary-color);
   font-size: 1.5rem;
@@ -182,6 +186,27 @@ body {
 .social-links a:hover {
   color: var(--secondary-color);
 }
+
+/* FIX FOR MOBILE SCREENS */
+@media (max-width: 768px) {
+  .social-links {
+    position: relative;      /* Remove absolute positioning */
+    left: 0;
+    top: 0;
+    transform: none;
+    flex-direction: row;     /* Make icons horizontal */
+    justify-content: center;
+    padding: 8px 0;
+    background: none;        /* Remove white background on mobile */
+    box-shadow: none;
+    margin-top: 15px;
+  }
+
+  .social-links a {
+    font-size: 1.3rem;
+  }
+}
+
 
 
 /* Sticky Chat Widget */
