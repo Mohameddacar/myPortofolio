@@ -117,30 +117,129 @@ body {
 
 /* Home Section */
 .home {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: var(--light-bg);
-    padding-top: 80px;
-}
-
-.home-content {
-    text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--light-bg);
+  position: relative;
+  padding-top: 80px;
+  text-align: center;
 }
 
 .home-content h1 {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
 }
 
 .home-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
 }
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: #0d6efd;
+  transform: translateY(-3px);
+}
+
+/* Social Links Sidebar */
+.social-links {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.social-links a {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+}
+
+
+/* Sticky Chat Widget */
+.chat-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+/* Chat Button */
+.chat-btn {
+  background: #f4f4f4;
+  color: #222;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.3s ease;
+}
+
+.chat-btn:hover {
+  background: #e6e6e6;
+}
+
+/* Wave Emoji */
+.wave {
+  font-size: 16px;
+}
+
+/* WhatsApp Icon */
+.chat-icon {
+  width: 45px;
+  height: 45px;
+  background: #25d366; /* WhatsApp green */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: #fff;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.chat-icon:hover {
+  transform: scale(1.1);
+}
+
 
 /* Button Styles */
 .btn {
